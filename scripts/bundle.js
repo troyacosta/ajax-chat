@@ -5,7 +5,7 @@ $(document).ready(function () {
 	var inputBox = $('#inputBox');
 	var newMessage = $('#newMessage');
 	var message = null;
-
+	var userName = $('#user');
 	// event listener function. Gets input data and posts to server
 
 	$('form').submit(function (e) {
@@ -20,8 +20,9 @@ $(document).ready(function () {
 	setInterval(function () {
 		$.get('http://tiyfe.herokuapp.com/collections/troy-messages', function (data) {
 			newMessage.html('');
+			name = userName.val();
 			data.forEach(function (chat) {
-				newMessage.append('<p>' + chat.message + '</p>');
+				newMessage.append('<p>' + name + ': ' + chat.message + '</p>');
 			});
 		}, 'json');
 	}, 500);
