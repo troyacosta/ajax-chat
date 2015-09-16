@@ -1,0 +1,23 @@
+form {
+	text-align: center;
+}
+input {
+	font-size: 1.5em;
+	width: 30%;
+}
+button {
+	background-color: blue;
+	color: white;
+}
+#newMessage {
+	width: 100%;
+	height: 20em;
+	font-size: 1.5em;
+	background-color: #ccffff;
+	overflow: scroll;
+	p {
+		margin: 0;
+	}
+
+	
+}
